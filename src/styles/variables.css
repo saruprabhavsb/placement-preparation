@@ -1,0 +1,51 @@
+/* src/styles/variables.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  /* Colors - Sleek Dark Palette */
+  --bg-primary: #080a10;
+  --bg-secondary: #0f1322;
+  --bg-tertiary: #161c33;
+  
+  --primary: #6366f1;       /* Cyber Indigo */
+  --primary-hover: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.3);
+  
+  --secondary: #a855f7;     /* Electric Violet */
+  --secondary-hover: #9333ea;
+  --secondary-glow: rgba(168, 85, 247, 0.3);
+  
+  --accent: #10b981;        /* Emerald Accent */
+  --accent-hover: #059669;
+  --accent-glow: rgba(16, 185, 129, 0.3);
+  
+  --danger: #ef4444;        /* Crimson Danger */
+  --danger-hover: #dc2626;
+  
+  --warning: #f59e0b;       /* Cyber Orange */
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  
+  /* Layout Dimensions */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 80px;
+  --header-height: 70px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  
+  /* Fonts */
+  --font-display: 'Outfit', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
