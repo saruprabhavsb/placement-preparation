@@ -1,6 +1,5 @@
 import http from 'http';
 
-const HOST = '127.0.0.1';
 const PORT = process.env.PORT || 4000;
 
 const server = http.createServer((req, res) => {
@@ -27,25 +26,31 @@ const server = http.createServer((req, res) => {
 
   if (url.pathname === '/api/echo' && req.method === 'POST') {
     let body = '';
+
     req.on('data', (chunk) => {
       body += chunk;
     });
+
     req.on('end', () => {
       try {
         const data = body ? JSON.parse(body) : {};
+
         res.writeHead(200, {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
         });
+
         res.end(JSON.stringify({ success: true, data }));
       } catch (error) {
         res.writeHead(400, {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
         });
+
         res.end(JSON.stringify({ error: 'Invalid JSON payload' }));
       }
     });
+
     return;
   }
 
@@ -53,9 +58,10 @@ const server = http.createServer((req, res) => {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
   });
+
   res.end(JSON.stringify({ error: 'Not found' }));
 });
 
-server.listen(PORT, HOST, () => {
-  console.log(`Backend server running at http://${HOST}:${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Backend server running on port ${PORT}`);
 });
